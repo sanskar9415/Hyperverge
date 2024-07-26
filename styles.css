@@ -1,0 +1,221 @@
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  height: 100vh;
+  background: #f0f2f5;
+}
+
+/* Root Variables */
+:root {
+  --primary-color: #7c4dff;
+  --secondary-color: #6c757d;
+  --background-color: #2c2c2c;
+  --border-color: #dee2e6;
+  --widget-background: #3a3a3a;
+  --widget-color: #ffffff;
+}
+
+/* App Container */
+.app-container {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 260px;
+  padding: 20px;
+  box-shadow: 4px 0 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  background: var(--widget-background);
+}
+
+.sidebar .tabs .tab {
+  padding: 15px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  border-radius: 6px;
+  text-align: center;
+  transition: background-color 0.3s, transform 0.2s;
+  color: var(--widget-color);
+}
+
+.sidebar .tabs .tab a {
+  color: var(--widget-color);
+  text-decoration: none;
+}
+
+.sidebar .tabs .tab:hover {
+  background-color: #495057;
+  transform: scale(1.05);
+}
+
+.sidebar .tabs .tab-active {
+  background-color: var(--primary-color);
+}
+
+/* Pomodoro Timer */
+.tab1 {
+  background: var(--primary-color);
+  border-radius: 12px;
+  padding: 20px;
+  color: #ffffff;
+  text-align: center;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.tab1 h1 {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.tab1 input[type="number"] {
+  width: 60px;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  margin-right: 10px;
+}
+
+.tab1 button {
+  background-color: #8a2be2;
+  border: none;
+  border-radius: 6px;
+  padding: 10px;
+  color: #ffffff;
+  font-size: 16px;
+  margin: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.tab1 button:hover {
+  background-color: #6a0dad;
+  transform: translateY(-2px);
+}
+
+#timer-display {
+  font-size: 36px;
+  margin-top: 20px;
+}
+
+.tab1:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  padding: 20px;
+  overflow: auto;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+iframe {
+  width: 100%;
+  border: none;
+  border-radius: 6px;
+}
+
+/* Widgets Container */
+.widgets-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.widget {
+  background: var(--widget-background);
+  color: var(--widget-color);
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  min-width: 200px;
+  max-width: 300px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.widget h2 {
+  margin-top: 0;
+}
+
+.widget iframe {
+  min-height: 200px;
+}
+
+.widget:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Poll Section */
+.poll {
+  margin-top: 20px;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.poll h2 {
+  margin-top: 0;
+}
+
+.poll form {
+  display: flex;
+  flex-direction: column;
+}
+
+.poll input[type="text"] {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+}
+
+.poll button {
+  padding: 10px;
+  border: none;
+  background-color: var(--primary-color);
+  color: #ffffff;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.poll button:hover {
+  background-color: #6a0dad;
+  transform: translateY(-2px);
+}
+
+#pollResults {
+  margin-top: 20px;
+}
+
+/* Poll Results Styles */
+#pollResults h2 {
+  margin-top: 0;
+}
+.corporate-item {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+.corporate-item-header {
+  font-weight: bold;
+}
